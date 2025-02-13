@@ -1,0 +1,4 @@
+# packaging==24.2
+#Requests==2.32.3 # server
+Requests==2.0.0 #vulnerable
+#commented_package==222.2222

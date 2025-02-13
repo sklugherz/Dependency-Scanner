@@ -1,0 +1,691 @@
+{
+    "resultsPerPage": 3,
+    "startIndex": 0,
+    "totalResults": 3,
+    "format": "NVD_CVE",
+    "version": "2.0",
+    "timestamp": "2025-02-06T20:26:10.663",
+    "vulnerabilities": [
+      {
+        "cve": {
+          "id": "CVE-2014-1829",
+          "sourceIdentifier": "cve@mitre.org",
+          "published": "2014-10-15T14:55:05.400",
+          "lastModified": "2024-11-21T02:05:06.670",
+          "vulnStatus": "Modified",
+          "cveTags": [],
+          "descriptions": [
+            {
+              "lang": "en",
+              "value": "Requests (aka python-requests) before 2.3.0 allows remote servers to obtain a netrc password by reading the Authorization header in a redirected request."
+            },
+            {
+              "lang": "es",
+              "value": "Requests(también conocido como python-requests) anterior a 2.3.0 permite a atacantes remotos obtener una contraseña netrc leyendo la cabecera 'Authorization' en una petición de redirección."
+            }
+          ],
+          "metrics": {
+            "cvssMetricV2": [
+              {
+                "source": "nvd@nist.gov",
+                "type": "Primary",
+                "cvssData": {
+                  "version": "2.0",
+                  "vectorString": "AV:N/AC:L/Au:N/C:P/I:N/A:N",
+                  "baseScore": 5,
+                  "accessVector": "NETWORK",
+                  "accessComplexity": "LOW",
+                  "authentication": "NONE",
+                  "confidentialityImpact": "PARTIAL",
+                  "integrityImpact": "NONE",
+                  "availabilityImpact": "NONE"
+                },
+                "baseSeverity": "MEDIUM",
+                "exploitabilityScore": 10,
+                "impactScore": 2.9,
+                "acInsufInfo": false,
+                "obtainAllPrivilege": false,
+                "obtainUserPrivilege": false,
+                "obtainOtherPrivilege": false,
+                "userInteractionRequired": false
+              }
+            ]
+          },
+          "weaknesses": [
+            {
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "description": [
+                {
+                  "lang": "en",
+                  "value": "CWE-200"
+                }
+              ]
+            }
+          ],
+          "configurations": [
+            {
+              "nodes": [
+                {
+                  "operator": "OR",
+                  "negate": false,
+                  "cpeMatch": [
+                    {
+                      "vulnerable": true,
+                      "criteria": "cpe:2.3:o:debian:debian_linux:7.0:*:*:*:*:*:*:*",
+                      "matchCriteriaId": "16F59A04-14CF-49E2-9973-645477EA09DA"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "nodes": [
+                {
+                  "operator": "OR",
+                  "negate": false,
+                  "cpeMatch": [
+                    {
+                      "vulnerable": true,
+                      "criteria": "cpe:2.3:a:python:requests:*:*:*:*:*:*:*:*",
+                      "versionEndIncluding": "2.2.1",
+                      "matchCriteriaId": "79441BF0-F885-4440-B795-5F59EFBD53BE"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "nodes": [
+                {
+                  "operator": "OR",
+                  "negate": false,
+                  "cpeMatch": [
+                    {
+                      "vulnerable": true,
+                      "criteria": "cpe:2.3:o:canonical:ubuntu_linux:14.04:*:*:*:lts:*:*:*",
+                      "matchCriteriaId": "B5A6F2F3-4894-4392-8296-3B8DD2679084"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "nodes": [
+                {
+                  "operator": "OR",
+                  "negate": false,
+                  "cpeMatch": [
+                    {
+                      "vulnerable": true,
+                      "criteria": "cpe:2.3:o:mageia:mageia:4.0:*:*:*:*:*:*:*",
+                      "matchCriteriaId": "F805A106-9A6F-48E7-8582-D3C5A26DFC11"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "references": [
+            {
+              "url": "http://advisories.mageia.org/MGASA-2014-0409.html",
+              "source": "cve@mitre.org",
+              "tags": [
+                "Third Party Advisory"
+              ]
+            },
+            {
+              "url": "http://www.debian.org/security/2015/dsa-3146",
+              "source": "cve@mitre.org",
+              "tags": [
+                "Third Party Advisory"
+              ]
+            },
+            {
+              "url": "http://www.mandriva.com/security/advisories?name=MDVSA-2015:133",
+              "source": "cve@mitre.org",
+              "tags": [
+                "Broken Link"
+              ]
+            },
+            {
+              "url": "http://www.ubuntu.com/usn/USN-2382-1",
+              "source": "cve@mitre.org",
+              "tags": [
+                "Third Party Advisory"
+              ]
+            },
+            {
+              "url": "https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=733108",
+              "source": "cve@mitre.org",
+              "tags": [
+                "Issue Tracking"
+              ]
+            },
+            {
+              "url": "https://github.com/kennethreitz/requests/issues/1885",
+              "source": "cve@mitre.org",
+              "tags": [
+                "Issue Tracking",
+                "Patch"
+              ]
+            },
+            {
+              "url": "http://advisories.mageia.org/MGASA-2014-0409.html",
+              "source": "af854a3a-2127-422b-91ae-364da2661108",
+              "tags": [
+                "Third Party Advisory"
+              ]
+            },
+            {
+              "url": "http://www.debian.org/security/2015/dsa-3146",
+              "source": "af854a3a-2127-422b-91ae-364da2661108",
+              "tags": [
+                "Third Party Advisory"
+              ]
+            },
+            {
+              "url": "http://www.mandriva.com/security/advisories?name=MDVSA-2015:133",
+              "source": "af854a3a-2127-422b-91ae-364da2661108",
+              "tags": [
+                "Broken Link"
+              ]
+            },
+            {
+              "url": "http://www.ubuntu.com/usn/USN-2382-1",
+              "source": "af854a3a-2127-422b-91ae-364da2661108",
+              "tags": [
+                "Third Party Advisory"
+              ]
+            },
+            {
+              "url": "https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=733108",
+              "source": "af854a3a-2127-422b-91ae-364da2661108",
+              "tags": [
+                "Issue Tracking"
+              ]
+            },
+            {
+              "url": "https://github.com/kennethreitz/requests/issues/1885",
+              "source": "af854a3a-2127-422b-91ae-364da2661108",
+              "tags": [
+                "Issue Tracking",
+                "Patch"
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "cve": {
+          "id": "CVE-2014-1830",
+          "sourceIdentifier": "cve@mitre.org",
+          "published": "2014-10-15T14:55:05.447",
+          "lastModified": "2024-11-21T02:05:06.840",
+          "vulnStatus": "Modified",
+          "cveTags": [],
+          "descriptions": [
+            {
+              "lang": "en",
+              "value": "Requests (aka python-requests) before 2.3.0 allows remote servers to obtain sensitive information by reading the Proxy-Authorization header in a redirected request."
+            },
+            {
+              "lang": "es",
+              "value": "Requests (también conocido como python-requests) anterior a 2.3.0 permite a servidores remotos obtener información sensible leyendo la cabecera en 'Proxy-Authorization' con una petición de redirección."
+            }
+          ],
+          "metrics": {
+            "cvssMetricV2": [
+              {
+                "source": "nvd@nist.gov",
+                "type": "Primary",
+                "cvssData": {
+                  "version": "2.0",
+                  "vectorString": "AV:N/AC:L/Au:N/C:P/I:N/A:N",
+                  "baseScore": 5,
+                  "accessVector": "NETWORK",
+                  "accessComplexity": "LOW",
+                  "authentication": "NONE",
+                  "confidentialityImpact": "PARTIAL",
+                  "integrityImpact": "NONE",
+                  "availabilityImpact": "NONE"
+                },
+                "baseSeverity": "MEDIUM",
+                "exploitabilityScore": 10,
+                "impactScore": 2.9,
+                "acInsufInfo": false,
+                "obtainAllPrivilege": false,
+                "obtainUserPrivilege": false,
+                "obtainOtherPrivilege": false,
+                "userInteractionRequired": false
+              }
+            ]
+          },
+          "weaknesses": [
+            {
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "description": [
+                {
+                  "lang": "en",
+                  "value": "CWE-200"
+                }
+              ]
+            }
+          ],
+          "configurations": [
+            {
+              "nodes": [
+                {
+                  "operator": "OR",
+                  "negate": false,
+                  "cpeMatch": [
+                    {
+                      "vulnerable": true,
+                      "criteria": "cpe:2.3:o:opensuse:opensuse:13.1:*:*:*:*:*:*:*",
+                      "matchCriteriaId": "A10BC294-9196-425F-9FB0-B1625465B47F"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "nodes": [
+                {
+                  "operator": "OR",
+                  "negate": false,
+                  "cpeMatch": [
+                    {
+                      "vulnerable": true,
+                      "criteria": "cpe:2.3:a:python:requests:*:*:*:*:*:*:*:*",
+                      "versionEndIncluding": "2.2.1",
+                      "matchCriteriaId": "79441BF0-F885-4440-B795-5F59EFBD53BE"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "references": [
+            {
+              "url": "http://advisories.mageia.org/MGASA-2014-0409.html",
+              "source": "cve@mitre.org"
+            },
+            {
+              "url": "http://lists.opensuse.org/opensuse-updates/2016-01/msg00095.html",
+              "source": "cve@mitre.org"
+            },
+            {
+              "url": "http://www.debian.org/security/2015/dsa-3146",
+              "source": "cve@mitre.org"
+            },
+            {
+              "url": "http://www.mandriva.com/security/advisories?name=MDVSA-2015:133",
+              "source": "cve@mitre.org"
+            },
+            {
+              "url": "https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=733108",
+              "source": "cve@mitre.org",
+              "tags": [
+                "Vendor Advisory"
+              ]
+            },
+            {
+              "url": "https://github.com/kennethreitz/requests/issues/1885",
+              "source": "cve@mitre.org"
+            },
+            {
+              "url": "http://advisories.mageia.org/MGASA-2014-0409.html",
+              "source": "af854a3a-2127-422b-91ae-364da2661108"
+            },
+            {
+              "url": "http://lists.opensuse.org/opensuse-updates/2016-01/msg00095.html",
+              "source": "af854a3a-2127-422b-91ae-364da2661108"
+            },
+            {
+              "url": "http://www.debian.org/security/2015/dsa-3146",
+              "source": "af854a3a-2127-422b-91ae-364da2661108"
+            },
+            {
+              "url": "http://www.mandriva.com/security/advisories?name=MDVSA-2015:133",
+              "source": "af854a3a-2127-422b-91ae-364da2661108"
+            },
+            {
+              "url": "https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=733108",
+              "source": "af854a3a-2127-422b-91ae-364da2661108",
+              "tags": [
+                "Vendor Advisory"
+              ]
+            },
+            {
+              "url": "https://github.com/kennethreitz/requests/issues/1885",
+              "source": "af854a3a-2127-422b-91ae-364da2661108"
+            }
+          ]
+        }
+      },
+      {
+        "cve": {
+          "id": "CVE-2018-18074",
+          "sourceIdentifier": "cve@mitre.org",
+          "published": "2018-10-09T17:29:01.897",
+          "lastModified": "2024-11-21T03:55:26.530",
+          "vulnStatus": "Modified",
+          "cveTags": [],
+          "descriptions": [
+            {
+              "lang": "en",
+              "value": "The Requests package before 2.20.0 for Python sends an HTTP Authorization header to an http URI upon receiving a same-hostname https-to-http redirect, which makes it easier for remote attackers to discover credentials by sniffing the network."
+            },
+            {
+              "lang": "es",
+              "value": "El paquete Requests antes de la versión 2.20.0 para Python envía una cabecera de autorización HTTP a un URI http al recibir una redirección same-hostname https-to-http, lo que facilita que los atacantes remotos descibran las credenciales esnifando la red."
+            }
+          ],
+          "metrics": {
+            "cvssMetricV31": [
+              {
+                "source": "nvd@nist.gov",
+                "type": "Primary",
+                "cvssData": {
+                  "version": "3.1",
+                  "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+                  "baseScore": 7.5,
+                  "baseSeverity": "HIGH",
+                  "attackVector": "NETWORK",
+                  "attackComplexity": "LOW",
+                  "privilegesRequired": "NONE",
+                  "userInteraction": "NONE",
+                  "scope": "UNCHANGED",
+                  "confidentialityImpact": "HIGH",
+                  "integrityImpact": "NONE",
+                  "availabilityImpact": "NONE"
+                },
+                "exploitabilityScore": 3.9,
+                "impactScore": 3.6
+              }
+            ],
+            "cvssMetricV2": [
+              {
+                "source": "nvd@nist.gov",
+                "type": "Primary",
+                "cvssData": {
+                  "version": "2.0",
+                  "vectorString": "AV:N/AC:L/Au:N/C:P/I:N/A:N",
+                  "baseScore": 5,
+                  "accessVector": "NETWORK",
+                  "accessComplexity": "LOW",
+                  "authentication": "NONE",
+                  "confidentialityImpact": "PARTIAL",
+                  "integrityImpact": "NONE",
+                  "availabilityImpact": "NONE"
+                },
+                "baseSeverity": "MEDIUM",
+                "exploitabilityScore": 10,
+                "impactScore": 2.9,
+                "acInsufInfo": false,
+                "obtainAllPrivilege": false,
+                "obtainUserPrivilege": false,
+                "obtainOtherPrivilege": false,
+                "userInteractionRequired": false
+              }
+            ]
+          },
+          "weaknesses": [
+            {
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "description": [
+                {
+                  "lang": "en",
+                  "value": "CWE-522"
+                }
+              ]
+            }
+          ],
+          "configurations": [
+            {
+              "nodes": [
+                {
+                  "operator": "OR",
+                  "negate": false,
+                  "cpeMatch": [
+                    {
+                      "vulnerable": true,
+                      "criteria": "cpe:2.3:a:python:requests:*:*:*:*:*:*:*:*",
+                      "versionEndExcluding": "2.20.0",
+                      "matchCriteriaId": "7CFBA4E8-EE3D-413C-8175-43F7E42960CA"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "nodes": [
+                {
+                  "operator": "OR",
+                  "negate": false,
+                  "cpeMatch": [
+                    {
+                      "vulnerable": true,
+                      "criteria": "cpe:2.3:o:canonical:ubuntu_linux:14.04:*:*:*:esm:*:*:*",
+                      "matchCriteriaId": "815D70A8-47D3-459C-A32C-9FEACA0659D1"
+                    },
+                    {
+                      "vulnerable": true,
+                      "criteria": "cpe:2.3:o:canonical:ubuntu_linux:16.04:*:*:*:lts:*:*:*",
+                      "matchCriteriaId": "F7016A2A-8365-4F1A-89A2-7A19F2BCAE5B"
+                    },
+                    {
+                      "vulnerable": true,
+                      "criteria": "cpe:2.3:o:canonical:ubuntu_linux:18.04:*:*:*:lts:*:*:*",
+                      "matchCriteriaId": "23A7C53F-B80F-4E6A-AFA9-58EEA84BE11D"
+                    },
+                    {
+                      "vulnerable": true,
+                      "criteria": "cpe:2.3:o:canonical:ubuntu_linux:18.10:*:*:*:*:*:*:*",
+                      "matchCriteriaId": "07C312A0-CD2C-4B9C-B064-6409B25C278F"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "nodes": [
+                {
+                  "operator": "OR",
+                  "negate": false,
+                  "cpeMatch": [
+                    {
+                      "vulnerable": true,
+                      "criteria": "cpe:2.3:o:opensuse:leap:15.1:*:*:*:*:*:*:*",
+                      "matchCriteriaId": "B620311B-34A3-48A6-82DF-6F078D7A4493"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "nodes": [
+                {
+                  "operator": "OR",
+                  "negate": false,
+                  "cpeMatch": [
+                    {
+                      "vulnerable": true,
+                      "criteria": "cpe:2.3:o:redhat:enterprise_linux_desktop:7.0:*:*:*:*:*:*:*",
+                      "matchCriteriaId": "33C068A4-3780-4EAB-A937-6082DF847564"
+                    },
+                    {
+                      "vulnerable": true,
+                      "criteria": "cpe:2.3:o:redhat:enterprise_linux_server:7.0:*:*:*:*:*:*:*",
+                      "matchCriteriaId": "51EF4996-72F4-4FA4-814F-F5991E7A8318"
+                    },
+                    {
+                      "vulnerable": true,
+                      "criteria": "cpe:2.3:o:redhat:enterprise_linux_workstation:7.0:*:*:*:*:*:*:*",
+                      "matchCriteriaId": "825ECE2D-E232-46E0-A047-074B34DB1E97"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "references": [
+            {
+              "url": "http://docs.python-requests.org/en/master/community/updates/#release-and-version-history",
+              "source": "cve@mitre.org",
+              "tags": [
+                "Release Notes",
+                "Third Party Advisory"
+              ]
+            },
+            {
+              "url": "http://lists.opensuse.org/opensuse-security-announce/2019-07/msg00024.html",
+              "source": "cve@mitre.org",
+              "tags": [
+                "Mailing List",
+                "Third Party Advisory"
+              ]
+            },
+            {
+              "url": "https://access.redhat.com/errata/RHSA-2019:2035",
+              "source": "cve@mitre.org",
+              "tags": [
+                "Third Party Advisory"
+              ]
+            },
+            {
+              "url": "https://bugs.debian.org/910766",
+              "source": "cve@mitre.org",
+              "tags": [
+                "Exploit",
+                "Issue Tracking",
+                "Patch",
+                "Third Party Advisory"
+              ]
+            },
+            {
+              "url": "https://github.com/requests/requests/commit/c45d7c49ea75133e52ab22a8e9e13173938e36ff",
+              "source": "cve@mitre.org",
+              "tags": [
+                "Patch",
+                "Third Party Advisory"
+              ]
+            },
+            {
+              "url": "https://github.com/requests/requests/issues/4716",
+              "source": "cve@mitre.org",
+              "tags": [
+                "Exploit",
+                "Patch",
+                "Third Party Advisory"
+              ]
+            },
+            {
+              "url": "https://github.com/requests/requests/pull/4718",
+              "source": "cve@mitre.org",
+              "tags": [
+                "Patch",
+                "Third Party Advisory"
+              ]
+            },
+            {
+              "url": "https://usn.ubuntu.com/3790-1/",
+              "source": "cve@mitre.org",
+              "tags": [
+                "Third Party Advisory"
+              ]
+            },
+            {
+              "url": "https://usn.ubuntu.com/3790-2/",
+              "source": "cve@mitre.org",
+              "tags": [
+                "Third Party Advisory"
+              ]
+            },
+            {
+              "url": "https://www.oracle.com/security-alerts/cpujul2022.html",
+              "source": "cve@mitre.org"
+            },
+            {
+              "url": "http://docs.python-requests.org/en/master/community/updates/#release-and-version-history",
+              "source": "af854a3a-2127-422b-91ae-364da2661108",
+              "tags": [
+                "Release Notes",
+                "Third Party Advisory"
+              ]
+            },
+            {
+              "url": "http://lists.opensuse.org/opensuse-security-announce/2019-07/msg00024.html",
+              "source": "af854a3a-2127-422b-91ae-364da2661108",
+              "tags": [
+                "Mailing List",
+                "Third Party Advisory"
+              ]
+            },
+            {
+              "url": "https://access.redhat.com/errata/RHSA-2019:2035",
+              "source": "af854a3a-2127-422b-91ae-364da2661108",
+              "tags": [
+                "Third Party Advisory"
+              ]
+            },
+            {
+              "url": "https://bugs.debian.org/910766",
+              "source": "af854a3a-2127-422b-91ae-364da2661108",
+              "tags": [
+                "Exploit",
+                "Issue Tracking",
+                "Patch",
+                "Third Party Advisory"
+              ]
+            },
+            {
+              "url": "https://github.com/requests/requests/commit/c45d7c49ea75133e52ab22a8e9e13173938e36ff",
+              "source": "af854a3a-2127-422b-91ae-364da2661108",
+              "tags": [
+                "Patch",
+                "Third Party Advisory"
+              ]
+            },
+            {
+              "url": "https://github.com/requests/requests/issues/4716",
+              "source": "af854a3a-2127-422b-91ae-364da2661108",
+              "tags": [
+                "Exploit",
+                "Patch",
+                "Third Party Advisory"
+              ]
+            },
+            {
+              "url": "https://github.com/requests/requests/pull/4718",
+              "source": "af854a3a-2127-422b-91ae-364da2661108",
+              "tags": [
+                "Patch",
+                "Third Party Advisory"
+              ]
+            },
+            {
+              "url": "https://usn.ubuntu.com/3790-1/",
+              "source": "af854a3a-2127-422b-91ae-364da2661108",
+              "tags": [
+                "Third Party Advisory"
+              ]
+            },
+            {
+              "url": "https://usn.ubuntu.com/3790-2/",
+              "source": "af854a3a-2127-422b-91ae-364da2661108",
+              "tags": [
+                "Third Party Advisory"
+              ]
+            },
+            {
+              "url": "https://www.oracle.com/security-alerts/cpujul2022.html",
+              "source": "af854a3a-2127-422b-91ae-364da2661108"
+            }
+          ]
+        }
+      }
+    ]
+  }

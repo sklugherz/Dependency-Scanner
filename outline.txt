@@ -1,0 +1,80 @@
+scanner
+
+    ctor()
+    self.nvd_api_url
+    self.x_api_url
+
+    get Dependencies
+        type X
+        type is python
+            get the dependency file for specified langauge, eg requirements.txt
+            parse file into dictionary {name : version}
+
+    get dependency file
+        type is '
+        
+    check dependencies
+        against x database
+            nvD database
+                filter to [node] for affected package and version
+                    parse into dictionary {affected_name : version range} <-- maybe name : list[num str num]
+                    check against dependencies by name
+                        if names match check if version is in range
+                            if within range add to results {dependency_name : Vulnerable} <-- find way to add severity
+                            else add to results {dependency_name : Non Found}
+        
+        
+    gen report in x format
+
+scanner_test
+
+    test_setup:
+        create dictionary of dependencies
+        make api call to get singular dependency
+            supplment data based on entry from above dictionary
+            create more data entries in return api call for each dictionary entry
+
+    test_get_dependencies:
+        test_get_python:
+            create expected outcome based off setup
+            call get_dependencies
+            compare to expected outcome
+    
+    test_check_dependencies
+        test_nvd_check
+            create expected outcome based off setup
+            call check_dependencies 
+            compare to expected outcome
+
+
+USAGE: python3 depscan [flags] [target]
+
+ACCEPTED TARGETS: <-- requires target to be in active directory
+python <-- requires requiremnts.txt
+
+support to be added for:
+npm/yarn <-- requires package.json
+Maven for Java
+Cargo for Rust
+Composer for PHP
+
+FLAGS:
+
+-h, -help : This package
+
+support to be added for flags:
+
+specify file format
+-f, --file=requirements.txt
+
+specify outfile and change output on outfile type, csv, pdf, html, cmdline
+defualt is cmdline
+-o, --outfile=outfile 
+
+print dependency tree to cmdline
+-t, --tree
+
+specify which database to check against, use for shorter testing time; default is all available databases
+-d, --database=nvd || NVD
+
+
